@@ -1,0 +1,132 @@
+/* navbar */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0% 5%;
+    align-items: center;
+}
+.dropdown-menu{
+    background-color:#71c9ce;
+
+}
+
+/*main page*/
+
+.mainsection{
+    background-color:#a6e3e9;
+    
+}
+
+.frontpage{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+    
+    
+}
+.text{
+    margin: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+
+}
+.fstimg{
+    align-self: center;
+
+}
+
+.row1{
+    justify-self: center;
+    align-self: center;
+    margin-top: 20%;
+    margin-bottom:50px ;
+    
+}
+.row2{
+    align-self: center;
+    margin-left: 14%;
+  
+}
+.mainpageUsername{
+    font-family: 'Dancing Script', cursive;
+    font-size: 400%;
+    color:white ;
+}
+
+.mainpageIam{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 400%;
+}
+
+/*---------main page rotating text plugin---------*/
+.t1{
+    font-family: 'Heebo', sans-serif;
+    font-size: 200%;
+    
+}
+.vert{
+    height: 50px;
+    float: left;
+    margin-right: 0.5em;
+  }
+b{
+    float: left;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+}
+.spantext{
+    display: inline-block;
+    color:white;
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    animation: move 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+  
+  @keyframes move {
+  0%  { top: 0px; }
+  20% { top: -50px; }
+  40% { top: -100px; }
+  60% { top: -150px; }
+  80% { top: -200px; }
+  }
+/*-------main page image effect-----*/
+.container{
+    position: relative;
+    width: 40%;
+    height: 30%;
+    background: rgba(0, 0,0, 0);
+    transform: rotate(-10deg)
+               skew(25deg)
+               scale(0.8);
+    transition: 0.5s;
+    padding:10% 0% 70% 0% ;          
+}
+.container img{
+    position: absolute;
+    width: 100%;
+    transition: 0.5s;
+}
+.container:hover img:nth-child(4){
+    transform: translate(20%,-20%);
+    opacity: 1;
+}
+.container:hover img:nth-child(3){
+    transform: translate( 15%, -15%);
+    opacity: 0.8;
+}
+.container:hover img:nth-child(2){
+    transform: translate( 10%, -10%);
+    opacity: 0.6;
+}
+.container:hover img:nth-child(1){
+    transform: translate( 5%, -5%);
+    opacity: 0.4;
+}
