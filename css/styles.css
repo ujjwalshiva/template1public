@@ -36,6 +36,7 @@ nav{
 .fstimg{
     align-self: center;
 
+
 }
 
 .row1{
@@ -59,6 +60,14 @@ nav{
 .mainpageIam{
     font-family: 'Montserrat', sans-serif;
     font-size: 400%;
+}
+
+/*About*/
+.aboutme{
+    padding-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /*---------main page rotating text plugin---------*/
@@ -101,9 +110,9 @@ b{
 .container{
     position: relative;
     width: 40%;
-    height: 30%;
+    height: 20%;
     background: rgba(0, 0,0, 0);
-    transform: rotate(-10deg)
+    transform: rotate(10deg)
                skew(25deg)
                scale(0.8);
     transition: 0.5s;
@@ -114,19 +123,51 @@ b{
     width: 100%;
     transition: 0.5s;
 }
+
 .container:hover img:nth-child(4){
     transform: translate(20%,-20%);
-    opacity: 1;
+    opacity: 2;
 }
 .container:hover img:nth-child(3){
-    transform: translate( 15%, -15%);
-    opacity: 0.8;
+    transform: translate( 16%, -16%);
+    opacity: 0.9;
 }
 .container:hover img:nth-child(2){
-    transform: translate( 10%, -10%);
-    opacity: 0.6;
+    transform: translate( 12%, -12%);
+    opacity: 0.8;
 }
 .container:hover img:nth-child(1){
-    transform: translate( 5%, -5%);
-    opacity: 0.4;
+    transform: translate( 8%, -8%);
+    opacity: 0.7;
+}
+
+.container img{
+    box-shadow: -20px 20px 20px rgba(0, 0,0, 0.2);
+}
+/*------underline effect-----*/
+.underline{
+    display: inline-block;
+    position: relative;
+    color:#000;
+    font-family: 'Sacramento', cursive;
+    font-size: 300%;
+
+}
+.underline::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    transform: scale(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #71c9ce;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    color:#71c9ce;
+
+}
+.underline:hover::after{
+    transform: scale(1);
+    transform-origin: bottom left;
 }
